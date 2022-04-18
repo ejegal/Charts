@@ -14,6 +14,7 @@
 		068A9B191FBBF351003CF1AD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B8EAF2F1AB32E15009697AA /* Images.xcassets */; };
 		068A9B1A1FBBF355003CF1AD /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B64D06EA1FB199130067418D /* Launch Screen.storyboard */; };
 		068A9B1B1FBBF366003CF1AD /* radar_marker@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5B613DA31D526AD5000F1E98 /* radar_marker@3x.png */; };
+		0C4A836D2807396400AC5A40 /* WeeklyAnalysisSpikeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4A836C2807396400AC5A40 /* WeeklyAnalysisSpikeViewController.swift */; };
 		225B36201F6EB9A50005B3D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225B361F1F6EB9A50005B3D5 /* AppDelegate.swift */; };
 		225B36311F6EB9EE0005B3D5 /* DemoBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225B362F1F6EB9EE0005B3D5 /* DemoBaseViewController.swift */; };
 		225B36321F6EB9EE0005B3D5 /* DemoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 225B36301F6EB9EE0005B3D5 /* DemoListViewController.swift */; };
@@ -199,6 +200,7 @@
 		0439A3521C9FF95F00496F83 /* PiePolylineChartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PiePolylineChartViewController.m; sourceTree = "<group>"; };
 		0471CBFB1CA1090A00E52DBC /* PiePolylineChartViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PiePolylineChartViewController.xib; sourceTree = "<group>"; };
 		0630AE391D8126C0008859B0 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = ../Charts.xcodeproj; sourceTree = "<group>"; };
+		0C4A836C2807396400AC5A40 /* WeeklyAnalysisSpikeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyAnalysisSpikeViewController.swift; sourceTree = "<group>"; };
 		225B361D1F6EB9A50005B3D5 /* ChartsDemo-iOS-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ChartsDemo-iOS-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		225B361F1F6EB9A50005B3D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		225B362F1F6EB9EE0005B3D5 /* DemoBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoBaseViewController.swift; sourceTree = "<group>"; };
@@ -415,6 +417,7 @@
 				225B364C1F6EBA410005B3D5 /* ScatterChartViewController.swift */,
 				225B36591F6EBA410005B3D5 /* SinusBarChartViewController.swift */,
 				225B364D1F6EBA410005B3D5 /* StackedBarChartViewController.swift */,
+				0C4A836C2807396400AC5A40 /* WeeklyAnalysisSpikeViewController.swift */,
 			);
 			path = Demos;
 			sourceTree = "<group>";
@@ -801,6 +804,7 @@
 				225B366C1F6EBA470005B3D5 /* HorizontalBarChartViewController.swift in Sources */,
 				225B36401F6EBA1D0005B3D5 /* XYMarkerView.swift in Sources */,
 				225B36421F6EBA1D0005B3D5 /* RadarMarkerView.swift in Sources */,
+				0C4A836D2807396400AC5A40 /* WeeklyAnalysisSpikeViewController.swift in Sources */,
 				225B366B1F6EBA470005B3D5 /* RadarChartViewController.swift in Sources */,
 				225B36611F6EBA470005B3D5 /* LineChart1ViewController.swift in Sources */,
 				225B36691F6EBA470005B3D5 /* PieChartViewController.swift in Sources */,
