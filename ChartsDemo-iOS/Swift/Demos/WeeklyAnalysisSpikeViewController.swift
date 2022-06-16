@@ -26,7 +26,7 @@ class WeeklyAnalysisSpikeViewController: UIViewController {
         chartView.drawBarShadowEnabled = false
         chartView.highlightFullBarEnabled = false
         chartView.isUserInteractionEnabled = false
-        chartView.drawGridBackgroundEnabled = true
+        chartView.drawGridBackgroundEnabled = false
 
         chartView.drawOrder = [DrawOrder.line.rawValue, DrawOrder.bar.rawValue]
 
@@ -76,20 +76,20 @@ class WeeklyAnalysisSpikeViewController: UIViewController {
     }
 
     func generateLineData() -> LineChartData {
-        let bounds = [[60.0, 80.0],
-                      [60.0, 80.0],
-                      [50.0, 70.0],
-                      [60.0, 80.0],
+        let bounds = [[60.0, 90.0],
+                      [60.0, 90.0],
+                      [50.0, 90.0],
+                      [60.0, 90.0],
                       [70.0, 90.0],
-                      [50.0, 70.0],
-                      [60.0, 80.0],
-                      [55.0, 75.0],
-                      [55.0, 75.0]]
-        let lowerBounds = (-1...ITEM_COUNT).map { i -> ChartDataEntry in
+                      [50.0, 90.0],
+                      [60.0, 90.0],
+                      [55.0, 90.0],
+                      [55.0, 90.0],[55.0, 70.0],[55.0, 90.0],[55.0, 90.0]]
+        let lowerBounds = (-1...10).map { i -> ChartDataEntry in
             return ChartDataEntry(x: Double(i), y: bounds[i+1][0])
         }
 
-        let upperBounds = (-1...ITEM_COUNT).map { i -> ChartDataEntry in
+        let upperBounds = (-1...10).map { i -> ChartDataEntry in
             return ChartDataEntry(x: Double(i), y: bounds[i+1][1])
         }
 
@@ -109,14 +109,19 @@ class WeeklyAnalysisSpikeViewController: UIViewController {
         let upperSet = LineChartDataSet(entries: upperBounds)
         upperSet.axisDependency = .left
         upperSet.drawFilledEnabled = true
-        upperSet.drawCirclesEnabled = false
+        upperSet.drawCirclesEnabled = true
         upperSet.drawValuesEnabled = false
-        upperSet.lineWidth = 0.0
+        upperSet.lineWidth = 1.0
         upperSet.mode = .horizontalBezier
-        upperSet.fillColor = .white
-        upperSet.fillAlpha = 1.0
+        let gradientColors = [//ChartColorTemplates.colorFromString("#C8E3B1").cgColor,
+            UIColor.white.withAlphaComponent(0.0).cgColor,
+                              ChartColorTemplates.colorFromString("#B4E0D8").cgColor]
+        let gradient = CGGradient(colorsSpace: nil, colors: gradientColors as CFArray, locations: [0.4,1])!
+
+        upperSet.fillAlpha = 1
+        upperSet.fill = LinearGradientFill(gradient: gradient, angle: 90)
         upperSet.fillFormatter = DefaultFillFormatter(block: { dataSet, dataProvider in
-            return CGFloat(self.chartView.leftAxis.axisMaximum)
+            return 40.0
         })
         upperSet.label = "WLZ"
 
